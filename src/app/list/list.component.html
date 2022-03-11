@@ -1,15 +1,19 @@
-<h2>Lista</h2>
+<h2>Lista de disciplinas cursadas por mim.</h2>
 <table border="1">
   <tr>
-    <th>ID</th>
-    <th>Texto</th>
+    <th>Código</th>
+    <th>Nome da disciplina</th>
+    <th>Dia da semana</th>
+    <th>Horário</th>
   </tr>
-  <tr *ngFor="let item of list, index as i">
+  <tr *ngFor="let item of list; index as i">
     <td>
-      <a [routerLink]="['/list',i]">
-      {{ item.id }}
-    </a>
+      <a [routerLink]="['/list', i]">
+        {{ item.id }}
+      </a>
     </td>
-    <td>{{ item.text }}</td>
+    <td>{{ item.curso }}</td>
+    <td>{{ item.diaDaSemana }}</td>
+    <td>{{ item.horario }}</td>
   </tr>
 </table>
