@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { listData } from '../list';
 
 @Component({
   selector: 'app-list-details',
