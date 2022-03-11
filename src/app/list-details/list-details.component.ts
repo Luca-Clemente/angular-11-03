@@ -9,7 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 export class ListDetailsComponent implements OnInit {
   item;
 
-  constructor(private router: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.paramMap.subscribe((params) => {
+      this.item = listData[params.get('index')];
+    });
+  }
 }
